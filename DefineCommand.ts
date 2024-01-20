@@ -4,7 +4,7 @@ import { ICommand } from "@antibot/interactions";
 
 export interface Command {
     command: ICommand;
-    permissions?: PermissionsBitField[];
+    permissions?: PermissionsBitField[] | any[];
     on: (ctx: Context, interaction: Interaction) => void;
 }
 

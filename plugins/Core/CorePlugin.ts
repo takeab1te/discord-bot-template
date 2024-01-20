@@ -1,19 +1,20 @@
 import { DefinePlugin } from "../../DefinePlugin";
 import { DefineEvent } from "../../DefineEvent";
 import { ChannelType } from "discord.js";
-import { Command } from "../../DefineCommand";
-import { PermissionsToHuman, PlantPermission } from "@antibot/interactions";
+import { Command, DefineCommand } from "../../DefineCommand";
+import { PermissionsToHuman, PlantPermission, ApplicationCommandType } from "@antibot/interactions";
 
 export = DefinePlugin({
   name: "Core",
   description: "Core process.",
+  commands: [],
   events: [
     DefineEvent({
       event: {
         name: "ready",
         once: true,
       },
-      on: (ctx, ...event) => {
+      on: (ctx) => {
         console.log(`${ctx.user.username} has logged in!`);
       },
     }),
@@ -60,4 +61,5 @@ export = DefinePlugin({
       },
     }),
   ],
+  public_plugin: false
 });

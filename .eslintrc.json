@@ -2,8 +2,7 @@
   "root": true,
   "extends": [
       "eslint:recommended",
-      "plugin:json/recommended",
-      "plugin:@typescript-eslint/recommended"
+      "plugin:json/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -15,15 +14,16 @@
       "json"
   ],
   "rules": {
-      "no-unused-vars": "off",
-      "no-undef": "off",
-      "func-names": "off",
-      "no-eval": "off",
-      "no-invalid-this": "off",
-      "no-return-await": "off",
+      "no-unused-vars": 2,
+      "no-undef": 0,
+      "func-names": 0,
+      "no-eval": 2,
+      "no-invalid-this": 0,
+      "no-return-await": 1,
       "no-var": "off",
-      "require-await": "off",
-      "no-extra-semi": "warn",
-      "no-var-requires": "off"
+      "require-await": 2,
+      "no-extra-semi": 1,
+      "prefer-const": 2,
+      "ban-ts-comment": 0
   }
 }

@@ -1,19 +1,17 @@
 import { DefinePlugin, Plugin } from "../../DefinePlugin";
-import { DefineCommand, Command } from "../../DefineCommand";
+import { DefineCommand } from "../../DefineCommand";
 import { ApplicationCommandType } from "@antibot/interactions";
-import { Interaction } from "discord.js";
 import { Context } from "../../Context";
-import { DefineEvent } from "../../DefineEvent";
-
+import { ChatInputCommandInteraction, Interaction } from "discord.js";
 export = DefinePlugin({
 	name: "Generic",
 	description: "test",
 	commands: [
 		DefineCommand({
 			command: {
-				name: "ping",
+				name: "test",
 				type: ApplicationCommandType.CHAT_INPUT,
-				description: "Get the ping of Anti-Bot",
+				description: "test",
 				options: [],
 			},
 			on: (ctx, interaction) => {
@@ -21,8 +19,10 @@ export = DefinePlugin({
 					return;
 				}
 
+				console.log(ctx.interactions)
 				return interaction.reply("Ping!")
 			},
 		}),
 	],
-});
+	public_plugin: true
+}) as Plugin;

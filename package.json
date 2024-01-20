@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "yarn build && node dist/index.js",
+    "start": "yarn build && eslint . && node dist/index.js",
     "eslint": "eslint .",
-    "testrun": "yarn eslint && yarn build && node dist/index.js",
     "builddocker": "docker build -t discord-bot-template .",
     "docker": "docker run -dp 127.0.0.1:3000:8000 --name discord-bot-template discord-bot-template:latest",
     "dockerstop": "docker stop discord-bot-template"
@@ -22,6 +21,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-json": "^3.1.0",
     "glob": "7.2.0",
+    "mongoose": "^8.1.0",
     "typescript": "^5.3.3",
     "typescript-eslint": "^0.0.1-alpha.0"
   }

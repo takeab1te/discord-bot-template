@@ -1,5 +1,6 @@
 import { Context } from "./Context";
 import { config } from "dotenv";
+import { SetMongo } from "./SetupMongo";
 config();
 const ctx: Context = new Context();
 
@@ -7,4 +8,8 @@ const ctx: Context = new Context();
     await require(`./handlers/${x}`).default(ctx);
 });
 
-ctx.login(process.env.TOKEN)
+SetMongo({
+	uri: process.env.MONGODB,
+});
+
+ctx.login(process.env.TOKEN);

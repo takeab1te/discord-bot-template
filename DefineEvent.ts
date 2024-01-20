@@ -10,8 +10,5 @@ export interface Event {
 }
 
 export function DefineEvent(options: Event): Event {
-	if (options) {
-		console.log("test")
-	}
 	return options;
 }
