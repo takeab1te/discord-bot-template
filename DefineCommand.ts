@@ -3,11 +3,11 @@ import { Context } from "./Context";
 import { ICommand } from "@antibot/interactions";
 
 export interface Command {
-  command: ICommand;
-  permissions?: PermissionsBitField[] | any[];
-  on: (ctx: Context, interaction: Interaction) => void;
+    command: ICommand;
+    permissions?: PermissionsBitField[];
+    on: (ctx: Context, interaction: Interaction) => void;
 }
 
 export function DefineCommand(options: Command): Command {
-  return options;
+    return options;
 }
