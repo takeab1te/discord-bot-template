@@ -20,10 +20,11 @@
       "no-eval": 2,
       "no-invalid-this": 0,
       "no-return-await": 1,
-      "no-var": "off",
+      "no-var": 0,
       "require-await": 2,
       "no-extra-semi": 1,
       "prefer-const": 2,
-      "ban-ts-comment": 0
+      "ban-ts-comment": 0,
+      "no-prototype-builtins": 1
   }
 }

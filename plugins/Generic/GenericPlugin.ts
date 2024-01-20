@@ -1,26 +1,30 @@
 import { DefinePlugin, Plugin } from "../../DefinePlugin";
-import { DefineCommand } from "../../DefineCommand";
+import { Command, DefineCommand } from "../../DefineCommand";
 import { ApplicationCommandType } from "@antibot/interactions";
 import { Context } from "../../Context";
 import { ChatInputCommandInteraction, Interaction } from "discord.js";
+import { GetCommands } from "../../GetCommands";
+
+
 export = DefinePlugin({
 	name: "Generic",
-	description: "test",
+	description: "Generic",
 	commands: [
 		DefineCommand({
 			command: {
-				name: "test",
+				name: "ping",
 				type: ApplicationCommandType.CHAT_INPUT,
-				description: "test",
-				options: [],
+				description: "ping",
+				options: []
 			},
 			on: (ctx, interaction) => {
 				if (!interaction.isCommand()) {
 					return;
 				}
-				return interaction.reply("Ping!")
-			},
-		}),
+
+				interaction.reply("test")
+			}
+		})
 	],
-	public_plugin: true
-}) as Plugin;
+	public_plugin: false
+});
