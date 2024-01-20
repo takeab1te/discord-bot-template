@@ -12,7 +12,6 @@ export default function (ctx: Context): void {
         if (file.events || file.commands) {
             file.events.forEach((x) => {
                 if (x.once !== true) {
-                    console.log(x)
                     ctx.on(x.event.name, (...args) => x.on(...args, ctx));
                 } else {
                     console.log("test2")

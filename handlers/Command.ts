@@ -12,7 +12,6 @@ export default function (ctx: Context): void {
 		//@ts-ignore
 		if (file.commands) {
 			//@ts-ignore
-			console.log("test")
 			ctx.plugin.set(file.name, file);
 			for (let i = 0; i < file.commands.length; i++) {
 				const command: Command = file.commands[i];

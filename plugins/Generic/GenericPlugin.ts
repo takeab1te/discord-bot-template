@@ -18,8 +18,6 @@ export = DefinePlugin({
 				if (!interaction.isCommand()) {
 					return;
 				}
-
-				console.log(ctx.interactions)
 				return interaction.reply("Ping!")
 			},
 		}),

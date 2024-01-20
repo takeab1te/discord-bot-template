@@ -1,8 +1,8 @@
 import { DefinePlugin } from "../../DefinePlugin";
 import { DefineEvent } from "../../DefineEvent";
 import { ChannelType } from "discord.js";
-import { Command, DefineCommand } from "../../DefineCommand";
-import { PermissionsToHuman, PlantPermission, ApplicationCommandType } from "@antibot/interactions";
+import { Command } from "../../DefineCommand";
+import { PermissionsToHuman, PlantPermission } from "@antibot/interactions";
 
 export = DefinePlugin({
   name: "Core",
