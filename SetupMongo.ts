@@ -4,7 +4,7 @@ export interface Mongo {
 	config?: ConnectOptions
 }
 
-export function SetMongo(options: Mongo): void {
+export function SetupMongo(options: Mongo): void {
 	mongoose.connect(options.uri, options.config);
 
 	mongoose.connection.on('connected', () => {

@@ -1,6 +1,6 @@
 import { Context } from "./Context";
 import { config } from "dotenv";
-import { SetMongo } from "./SetupMongo";
+import { SetupMongo } from "./SetupMongo";
 config();
 const ctx: Context = new Context();
 
@@ -8,7 +8,7 @@ const ctx: Context = new Context();
     await require(`./handlers/${x}`).default(ctx);
 });
 
-SetMongo({
+SetupMongo({
 	uri: process.env.MONGODB,
 });
 
